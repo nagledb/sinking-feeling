@@ -43,6 +43,12 @@ Template.game.onCreated(function() {
 });
 
 Template.game.helpers({
+  jsonGame(game) {
+    return JSON.stringify(game, null, '  ');
+  },
+  spy() {
+    return getAction() === 'spy';
+  },
   invalid() {
     return !getGame();
   },

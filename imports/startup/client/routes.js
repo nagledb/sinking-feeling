@@ -51,6 +51,14 @@ FlowRouter.route('/create', {
   }
 });
 
+import '/imports/ui/demo.js';
+FlowRouter.route('/demo', {
+  name: 'demo',
+  action: function() {
+    BlazeLayout.render('layout', {content: 'demo'});
+  }
+});
+
 import '/imports/ui/http404.js';
 FlowRouter.notFound = {
   action: function() {

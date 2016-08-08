@@ -5,6 +5,14 @@
 
     <h2 class="text-center">{{title game}}</h2>
     
+    {{#if spy}}
+    <div>
+      <pre>
+{{jsonGame game}}
+      </pre>
+    </div>
+    {{/if}}
+
     {{#if alert}}
       <div class="alert alert-danger" role="alert">
         {{alert}}
